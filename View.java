@@ -84,8 +84,15 @@ public void createAndSetVariables(){
 	list.setPrefHeight(90);
 }
 public void positionBoxes(){
+	//set alignment
+	mainVBox.setAlignment(Pos.TOP_CENTER);
+	stockVBox.setAlignment(Pos.TOP_CENTER);
 	splitScreen.setAlignment(Pos.TOP_CENTER);
+	//set padding
 	splitScreen.setPadding(new Insets(10));
+	mainVBox.setPadding(new Insets(10));
+	strategyVBox.setPadding(new Insets(10));
+	stockVBox.setPadding(new Insets(10));
 }
 public void addElementsToScene(){
 	//add strategy radios to strategy group
