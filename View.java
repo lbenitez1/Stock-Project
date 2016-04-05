@@ -37,7 +37,6 @@ public class View extends Application {
 	private Strategy strategy;
 	private StockDataSubject stockViewer;
 	private String strategyChoice, result, advice;
-	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -82,6 +81,7 @@ public void createAndSetVariables(){
 	          Toggle old_toggle, Toggle new_toggle) {
 	    	  RadioButton chk = (RadioButton)new_toggle.getToggleGroup().getSelectedToggle(); // Cast object to radio button
 	          strategyChoice = chk.getText();
+	          System.out.println("Selected Radio Button - "+chk.getText());
 	      }
 	    });
 	addRadioButtons();
@@ -94,7 +94,8 @@ public void createAndSetVariables(){
 		    "Facebook: FB\n", "Apple: AAPL\n",
 		    "NIKE: NKE\n", "Three M: MMM\n",
 		    "The Hershey Company: HSY\n"
-		    );				//items to be inserted into list view for stocks
+		    );				
+	//items to be inserted into list view for stocks
 	userStockList = new ListView<String>();
 	userStockList.setEditable(false);
 	stockList.setItems(stockItems);												//add the items to the list
@@ -201,7 +202,7 @@ public void createAndSetVariables(){
 	    	}
 	    	//items to be inserted into list view for stocks
 	    	userStockItems = FXCollections.observableArrayList (newValue);		
-	    	userStockList.setItems(userStockItems);        
+	    	userStockList.setItems(userStockItems);     
 	    }
 	});
 	stockList.setPrefWidth(500);
