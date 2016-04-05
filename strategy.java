@@ -1,5 +1,5 @@
 package application;
-public interface strategy {
+public interface Strategy {
 	//interface for retrieving info
-	public String getAdvice(int last, int close, String tickSymbol);
+	public String getAdvice(double last, double close, String tickSymbol);
 }

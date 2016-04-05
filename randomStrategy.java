@@ -1,13 +1,13 @@
 package application;
 import java.util.Date;
-public class randomStrategy implements strategy{
+public class randomStrategy implements Strategy{
 	//function to retrieve advice from stock software
-	public String getAdvice(int last, int close, String s){
+	public String getAdvice(double last, double close, String s){
 		Date d = new Date(System.currentTimeMillis());
-		System.out.println(d.toString().substring(11, 19));
+		//System.out.println(d.toString().substring(11, 19));
 		String hour = d.toString().substring(11, 13);
 		String minute = d.toString().substring(14, 16);
-		System.out.println(hour + " > "+ minute);
+		//System.out.println(hour + " > "+ minute);
         Integer h = Integer.parseInt(hour.trim());
         Integer m = Integer.parseInt(minute.trim());	
 		if(s.length() == 4){
